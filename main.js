@@ -57,7 +57,8 @@ tbody.appendChild(tr);
 var td = document.createElement('TD');
 td.setAttribute("class", "Poster");
 tr.appendChild(td);
-var img = document.createElement('img')
+var img = document.createElement('img');
+  img.setAttribute("class", "posterimg");
 var Poster = data.Poster
 img.setAttribute("src", Poster);
 td.appendChild(img);
