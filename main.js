@@ -5,7 +5,7 @@ var FIREBASE_URL ="https://moviedatabase.firebaseio.com/movies.json"
 /////////Begin Firebase////////
 $.get(FIREBASE_URL, function (movieDetails) {
   Object.keys(movieDetails).forEach(function (id) {
-		addMovieDetail(movieDetails[id], id);
+    addMovieDetail(movieDetails[id], id);
   });
 }); 
 
@@ -83,9 +83,11 @@ td_2.appendChild(text_2);
 var td_3 = document.createElement('TD');
 td_3.setAttribute("class", "Watched");
 tr.appendChild(td_3);
-/*var text_3 = document.createTextNode("Watched");*/
+
+var text_3 = document.createTextNode("Watched");
 var btn = document.createElement('button');
-btn.setAttribute('class', 'btn btn-danger');
+/*btn.setAttribute('class', 'btn btn-danger');*/
+btn.setAttribute('class', 'btn btn-delete'); 
 var btn_text = document.createTextNode('X');
   btn.appendChild(btn_text);
 td_3.appendChild(btn);
